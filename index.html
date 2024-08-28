@@ -11,8 +11,28 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 <style>
-    
+    .manrope-font{
+        font-family: "Manrope", sans-serif;
+       }
 </style>
+<script>
+    tailwind.config = {
+    theme: {
+        extend: {
+            backgroundImage: {
+                'bg-pattern': "url('./images/bg.jpg')",
+                },
+        colors: {
+            clifford: '#da373d',
+            'rent-primary': '#ABEF5F',
+                    'basic-01': '#494949',
+                    'basic-02': '#737373',
+                    'bt-bg1': '#abef5f80',
+        }
+        }
+    }
+    }
+</script>
 </head>
 <body class="manrope-font">
     <header class="md:container mx-auto my-10">
@@ -24,8 +44,26 @@
                         class=" h-8 w-8 bg-rent-primary -rotate-45 rounded-full text-black flex justify-center items-center mr-2">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
-
                     <a class="font-bold text-3xl">Rinterio</a>
                 </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-lg">
+                        <li><a class="font-bold text-black">Home</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>Blogs</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="gap-3 hidden md:flex">
+                    <div tabindex="0" role="button" class="btn btn-circle bg-white">
+                        <button class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
 </body>
 </html>
